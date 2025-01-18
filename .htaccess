@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Accès restreint"
+AuthUserFile /home/username/.htpasswd
+Require valid-user
+
