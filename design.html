@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="design.css" />
+    <link rel="icon" href="android-chrome-512x512.png" type="image/x-icon" />
+    <title>Design System - Ebong</title>
+  </head>
+  <body>
+    <!-- Nav starts here ---->
+    <header>
+      <nav class="Ebong_nav" id="up">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="Logo ebong.svg" alt="Logo" srcset=""
+          /></a>
+          <button class="menu-toggle" id="menu-toggle">
+            <img src="burger-menu-right-svgrepo-com.svg" alt="" />
+          </button>
+        </div>
+        <ul>
+          <li class="footages"><a href="404.html">Brief créatif</a></li>
+          <li class="footages"><a href="interview.html">Interviews</a></li>
+          <li class="about">
+            <a href="mailto:joellembede6789@email.com">Contactez-moi</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="design-h1"><h1>Design System</h1></div>
+
+      <!-- Section Typography -->
+      <section class="pdf-container">
+        <div class="pdf-item">
+          <h2>Typographies</h2>
+          <iframe
+            src="Typography.pdf"
+            title="Typography"
+            class="pdf-iframe"
+          ></iframe>
+          <div class="caption">
+            <p>
+              <b>Typographie </b>utilisée dans le design system. D'autres
+              visuels sont en cours de création par les équipes créatives.
+              <a href="404.html">Voir le brief créatif</a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="pdf-item">
+          <h2>Bouttons</h2>
+          <iframe src="Buttons.pdf" title="Buttons" class="pdf-iframe"></iframe>
+          <div class="caption">
+            <p>
+              <b>Boutons</b> utilisés dans le design system. D'autres visuels
+              sont en cours de création par les équipes créatives.
+              <a href="404.html">Voir le brief créatif</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer starts here -->
+    <footer>
+      <nav class="footer">
+        <div class="copyrights">
+          &copy; 2025 Ebong banque de données. Tous droits réservés. <br />
+          Développement et Design by Joelle Mbede
+        </div>
+      </nav>
+      <div class="Ndop"></div>
+    </footer>
+
+    <!-- Modal pour afficher les PDF en grand -->
+    <div id="pdf-modal" class="modal">
+      <span class="close-modal">&times;</span>
+      <iframe id="modal-iframe" class="modal-iframe"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

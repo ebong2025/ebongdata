@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <div id="loading">
+    <img src="Logo ebong.svg" alt="Chargement..." />
+  </div>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="volet.css" />
+    <link rel="icon" href="android-chrome-512x512.png" type="image/x-icon" />
+    <title>Plan d’Action Marketing - Ebong</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="Ebong_nav">
+        <div class="logo">
+          <a href="index.html"><img src="Logo ebong.svg" alt="Logo" /></a>
+          <button class="menu-toggle" id="menu-toggle">
+            <img src="burger-menu-right-svgrepo-com.svg" alt="Menu" />
+          </button>
+        </div>
+        <ul>
+          <li><a href="volet.html">Volet Financier</a></li>
+          <li><a href="interview.html">Interview</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- main part of the body starts here -->
+    <main id="main">
+      <h1>Plan d’action marketing opérationnel</h1>
+
+      <div class="content">
+        <h2>Itération de la roadmap UX sous forme de diagramme de Gantt</h2>
+        <p>
+          La roadmap UX a été construite en partie en collaboration avec le
+          client pour répondre aux besoins spécifiques du projet, tout en tenant
+          compte des ressources et des délais définis. Les itérations à apporter
+          incluent :
+        </p>
+        <ul>
+          <li>
+            <strong>Ajout de jalons intermédiaires :</strong> Les jalons
+            intermédiaires sont des étapes clés pour vérifier que chaque phase
+            avance correctement. Cela permettra de faire un point sur
+            l’avancement du projet, d’identifier d’éventuels blocages et de
+            s’assurer que les objectifs sont atteints avant de passer à l’étape
+            suivante.
+          </li>
+          <li>
+            <strong>Tests utilisateurs :</strong> À chaque grande étape, des
+            tests seront réalisés avec un échantillon d’utilisateurs pour
+            s’assurer que les fonctionnalités et l’interface répondent aux
+            attentes. Cela permet d’apporter des ajustements si nécessaire et
+            d’améliorer l’expérience utilisateur.
+          </li>
+          <li>
+            <strong>Planification des actions promotionnelles :</strong> Les
+            campagnes de communication seront alignées avec les jalons pour
+            garantir une visibilité optimale au moment du lancement des
+            différentes phases.
+          </li>
+        </ul>
+
+        <h2>Méthodologie agile appliquée : Kanban</h2>
+        <p>
+          La méthode Kanban sera appliquée pour organiser les tâches marketing
+          et assurer un suivi visuel clair. Voici les outils qui seront utilisés
+          :
+        </p>
+        <ol>
+          <li>
+            <strong>Trello :</strong>
+            <ul>
+              <li>
+                Trello est une plateforme en ligne qui permet de créer des
+                tableaux Kanban interactifs. Chaque colonne représente une étape
+                du projet : À faire, En cours et Terminé.
+              </li>
+              <li>
+                <strong>Cartes de tâches :</strong> Chaque action (ex : création
+                de visuels, lancement de campagnes publicitaires) sera inscrite
+                sous forme de carte avec des descriptions, des dates limites et
+                des responsables assignés.
+              </li>
+              <li>
+                <strong>Avantages :</strong> Trello est simple, visuel,
+                accessible en ligne, et permet de collaborer efficacement entre
+                membres de l’équipe.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Google Sheets :</strong>
+            <ul>
+              <li>
+                Google Sheets sera utilisé en complément pour établir un
+                calendrier détaillé des jalons intermédiaires et assurer le
+                suivi des tâches avec des deadlines précises.
+              </li>
+              <li>
+                <strong>Avantages :</strong> Outil gratuit, facile d’accès, et
+                idéal pour les ajustements rapides et partagés.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Teams/Zoom/Skype :</strong>
+            <ul>
+              <li>
+                Slack facilitera la communication entre les membres de l’équipe
+                en temps réel. Les canaux de discussion permettront d’échanger
+                rapidement sur les tâches et les blocages.
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <h3>Mise en place concrète :</h3>
+        <ul>
+          <li>
+            Chaque tâche sera priorisée dans Trello avec des étiquettes de
+            couleur pour indiquer son niveau d’urgence.
+          </li>
+          <li>
+            Les réunions hebdomadaires utiliseront le tableau Trello comme base
+            pour faire un point sur les tâches en cours et les ajustements
+            nécessaires.
+          </li>
+          <li>
+            Les jalons intermédiaires définis dans Google Sheets serviront de
+            repères pour valider les grandes étapes.
+          </li>
+        </ul>
+
+        <h2>
+          Explication des jalons et choix d’itération (apprendre et tester)
+        </h2>
+        <p>
+          Les itérations incluront des moments pour apprendre et tester. Chaque
+          grande étape du projet comportera une phase d’apprentissage via des
+          tests d’exploitation et des tests utilisateurs. Cela permet de valider
+          les choix de design et d’interface avant de passer à l’étape suivante.
+        </p>
+      </div>
+
+      <!-- Bouton Télécharger PDF -->
+      <div class="download-btn-container">
+        <button
+          class="document-btn"
+          onclick="window.open('Plan d\'actions marketing.pdf')"
+        >
+          Télécharger PDF
+        </button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <nav class="footer">
+        <div class="copyrights">
+          &copy; 2025 Ebong banque de données. Tous droits réservés. <br />
+          Développement et Design by Joelle Mbede
+        </div>
+      </nav>
+      <div class="Ndop"></div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
