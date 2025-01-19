@@ -201,3 +201,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Initialisation d'i18next avec les traductions
+i18next.init({
+  lng: 'fr', // Langue par défaut
+  resources: {
+    en: {
+      translation: {
+        welcome: "Welcome to our site",
+        greeting: "We are happy to have you here."
+      }
+    },
+    fr: {
+      translation: {
+        welcome: "Bienvenue sur notre site",
+        greeting: "Nous sommes heureux de vous voir ici."
+      }
+    }
+  }
+}, function(err, t) {
+  // Met à jour le texte initial lors du chargement
+  updateContent();
+});
+
+// Fonction pour changer la langue
+function changeLanguage(lang) {
+  i18next.changeLanguage(lang, function(err, t) {
+    updateContent(); // Met à jour les traductions sur la page
+  });
+}
+
+// Met à jour les éléments HTML avec les traductions appropriées
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(function(element) {
+    element.innerHTML = i18next.t(element.getAttribute('data-i18n'));
+  });
+}
