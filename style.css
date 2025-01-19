@@ -161,55 +161,6 @@ nav {
   text-decoration-color: white;
   color: #426593;
 }
-div {
-  margin-top: 20px;
-  text-align: center;
-}
-
-div {
-  margin-top: 20px;
-  text-align: center;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 0 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  outline: none;
-}
-
-button:hover {
-  background-color: #45a049;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-
-button:active {
-  background-color: #388e3c;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  transform: translateY(0);
-}
-
-button:disabled {
-  background-color: #c8e6c9;
-  color: #666;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
-}
-
-button:focus {
-  box-shadow: 0 0 0 3px rgba(72, 207, 173, 0.5);
-}
-
 
 /* debut main part */
 
