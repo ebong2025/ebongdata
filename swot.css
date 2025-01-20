@@ -162,6 +162,109 @@ nav {
 }
 
 /* Début main part */
+/* Style global pour le SWOT et PESTEL */
+#swot-pestel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Darker Grotesque", serif;
+    line-height: 1.8;
+    color: #274770;
+    background-color: #ffffff;
+}
+
+/* Titres principaux */
+#swot-pestel h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #274770;
+    border-bottom: 3px solid #ff7a59;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Description initiale */
+#swot-pestel p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+/* Grilles pour SWOT et PESTEL */
+.swot-grid, .pestel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Cartes SWOT et PESTEL */
+.swot-item, .pestel-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swot-item:hover, .pestel-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #e8f4fc;
+}
+
+/* Titres des cartes avec initiales */
+.swot-item h3, .pestel-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #274770;
+    font-weight: bold;
+}
+
+.highlight {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff7a59;
+}
+
+/* Texte des cartes */
+.swot-item p, .pestel-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Explications générales */
+.explanation {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    background-color: #f4f7f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .swot-grid, .pestel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #swot-pestel h2 {
+        font-size: 2rem;
+    }
+
+    .swot-item h3, .pestel-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .swot-item p, .pestel-item p, .explanation {
+        font-size: 1rem;
+    }
+}
 
 
 
