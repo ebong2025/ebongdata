@@ -224,19 +224,6 @@ i18next.init({
   updateContent();
 });
 
-// Fonction pour changer la langue
-function changeLanguage(lang) {
-  i18next.changeLanguage(lang, function(err, t) {
-    updateContent(); // Met à jour les traductions sur la page
-  });
-}
-
-// Met à jour les éléments HTML avec les traductions appropriées
-function updateContent() {
-  document.querySelectorAll('[data-i18n]').forEach(function(element) {
-    element.innerHTML = i18next.t(element.getAttribute('data-i18n'));
-  });
-}
 
 // Attendre que le DOM soit entièrement chargé
 document.addEventListener("DOMContentLoaded", () => {
@@ -257,35 +244,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Animation des titres au survol
-    const titles = document.querySelectorAll("#swot h2, #pestel h2");
-    titles.forEach(title => {
-        title.addEventListener("mouseenter", () => {
-            title.style.transition = "color 0.3s ease";
-            title.style.color = "#ff7a59";
-        });
 
-        title.addEventListener("mouseleave", () => {
-            title.style.color = "#274770";
-        });
-    });
-
-    // Animation des initiales des titres (S, W, O, T, etc.)
+                      
+    // Sélection des cartes et des titres page swot
+    const cards = document.querySelectorAll(".swot-item, .pestel-item");
     const highlights = document.querySelectorAll(".highlight");
-    highlights.forEach(highlight => {
-        highlight.style.transition = "color 0.3s ease, transform 0.3s ease";
-        highlight.addEventListener("mouseenter", () => {
-            highlight.style.color = "#00a676";
-            highlight.style.transform = "scale(1.2)";
-        });
-        highlight.addEventListener("mouseleave", () => {
-            highlight.style.color = "#ff7a59";
-            highlight.style.transform = "scale(1)";
-        });
+    const sections = document.querySelectorAll(".swot-grid, .pestel-grid");
+
+    // Effet d'apparition des sections en cascade
+    sections.forEach((section, index) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(100px)";
+        section.style.transition = `opacity 1s ease, transform 1s ease ${index * 0.2}s`;
     });
 
-    // Animation au scroll pour faire apparaître les sections progressivement
-    const sections = document.querySelectorAll(".swot-item, .pestel-item");
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -293,15 +265,67 @@ document.addEventListener("DOMContentLoaded", () => {
                 entry.target.style.transform = "translateY(0)";
             }
         });
-    }, {
-        threshold: 0.1
     });
 
     sections.forEach(section => {
-        section.style.opacity = "0";
-        section.style.transform = "translateY(50px)";
-        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
         observer.observe(section);
     });
-});
 
+    // Animation dynamique au survol des cartes
+    cards.forEach(card => {
+        card.style.transition = "all 0.5s ease";
+        card.addEventListener("mouseenter", () => {
+            card.style.transform = "rotate3d(1, 1, 0, 10deg) scale(1.1)";
+            card.style.boxShadow = "0px 15px 30px rgba(0, 0, 0, 0.3)";
+            card.style.backgroundColor = "#f0faff";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "rotate3d(0, 0, 0, 0) scale(1)";
+            card.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.1)";
+            card.style.backgroundColor = "#f9f9f9";
+        });
+    });
+
+    // Effet pulsant sur les initiales
+    highlights.forEach(highlight => {
+        highlight.style.display = "inline-block";
+        highlight.style.transition = "transform 0.5s ease, color 0.5s ease";
+        highlight.addEventListener("mouseenter", () => {
+            highlight.style.transform = "scale(1.5) rotate(-5deg)";
+            highlight.style.color = "#00a676";
+        });
+
+        highlight.addEventListener("mouseleave", () => {
+            highlight.style.transform = "scale(1) rotate(0deg)";
+            highlight.style.color = "#ff7a59";
+        });
+    });
+
+    // Animation des titres principaux
+    const titles = document.querySelectorAll("#swot h2, #pestel h2");
+    titles.forEach(title => {
+        title.style.position = "relative";
+        title.style.overflow = "hidden";
+
+        const underline = document.createElement("div");
+        underline.style.position = "absolute";
+        underline.style.bottom = "0";
+        underline.style.left = "0";
+        underline.style.width = "100%";
+        underline.style.height = "5px";
+        underline.style.backgroundColor = "#ff7a59";
+        underline.style.transform = "translateX(-100%)";
+        underline.style.transition = "transform 0.5s ease";
+
+        title.appendChild(underline);
+
+        title.addEventListener("mouseenter", () => {
+            underline.style.transform = "translateX(0)";
+        });
+
+        title.addEventListener("mouseleave", () => {
+            underline.style.transform = "translateX(-100%)";
+        });
+    });
+});
