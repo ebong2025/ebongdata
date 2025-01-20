@@ -503,40 +503,40 @@ footer {
   }
 }
 
-/* Tableau principal */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 14px;
-  overflow-y: scroll;
+@media (max-width: 768px) {
+   main {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 32px;
+        margin: 30px 0;
+    }
+    h2 {
+        font-size: 24px;
+        margin: 20px 0 10px;
+    }
+    p, ul li, ol li {
+        font-size: 16px;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+    }
 }
 
-table,
-th,
-td {
-  border: 1px solid #ddd;
-}
-
-/* Style pour les en-têtes */
-th {
-  background-color: #f2f2f2;
-  padding: 12px 15px;
-  text-align: center;
-}
-
-/* Style pour les cellules */
-td {
-  padding: 10px 15px;
-  text-align: center;
-}
-
-/* Style pour les lignes */
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Style au survol des lignes */
-tbody tr:hover {
-  background-color: #f1f1f1;
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 28px;
+        margin: 20px 0;
+    }
+    h2 {
+        font-size: 20px;
+        margin: 15px 0 5px;
+    }
+    p, ul li, ol li {
+        font-size: 14px;
+    }
 }
