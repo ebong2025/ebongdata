@@ -162,6 +162,7 @@ nav {
 }
 
 /* Début main part */
+/* Conteneur principal */
 .bmc-container {
     flex: 1;
     padding: 2rem;
@@ -179,60 +180,88 @@ nav {
     background: white;
     padding: 3rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 /* Titre */
 h1 {
     color: #274770;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    font-family: "Darker Grotesque", serif;
+    font-size: 36px;
+    margin: 50px 0;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
 /* Messages */
 .bmc-message p {
-    font-size: 1.1rem;
-    color: #4a5568;
-    margin-bottom: 1.5rem;
+    font-size: 18px;
+    color: #274770;
+    margin: 15px 0;
     line-height: 1.6;
 }
 
 .coming-soon {
     color: #e53e3e;
     font-style: italic;
-    margin: 1rem 0;
-    font-size: 0.95rem;
+    margin: 20px 0;
+    font-size: 16px;
 }
 
-/* Bouton CTA */
-.download-btn-container {
-  text-align: center;
-  margin: 40px 0;
-}
-
+/* Bouton style PDF */
 .document-btn {
-  font-family: "Darker Grotesque", serif;
-  background: #f5f5f5;
-  color: #274770;
-  border: 1px solid #274770;
-  border-radius: 50px;
-  padding: 15px 30px;
-  font-size: 25px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-  width: auto;
-  display: inline-block;
+    font-family: "Darker Grotesque", serif;
+    background: #f5f5f5;
+    color: #274770;
+    border: 1px solid #274770;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    margin-top: 30px;
 }
 
 .document-btn:hover {
-  background: #274770;
-  color: white;
-  transform: scale(1.05);
+    background: #274770;
+    color: white;
+    transform: scale(1.05);
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bmc-content {
+        padding: 2rem;
+    }
+    
+    h1 {
+        font-size: 32px;
+        margin: 30px 0;
+    }
+    
+    .document-btn {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bmc-content {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .document-btn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
 /* Footer */
 
 footer {
