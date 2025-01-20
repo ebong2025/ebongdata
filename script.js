@@ -202,130 +202,94 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Initialisation d'i18next avec les traductions
-i18next.init({
-  lng: 'fr', // Langue par défaut
-  resources: {
-    en: {
-      translation: {
-        welcome: "Welcome to our site",
-        greeting: "We are happy to have you here."
-      }
-    },
-    fr: {
-      translation: {
-        welcome: "Bienvenue sur notre site",
-        greeting: "Nous sommes heureux de vous voir ici."
-      }
-    }
-  }
-}, function(err, t) {
-  // Met à jour le texte initial lors du chargement
-  updateContent();
-});
-
-
-// Attendre que le DOM soit entièrement chargé
+---------------
 document.addEventListener("DOMContentLoaded", () => {
     // Sélectionner toutes les cartes SWOT et PESTEL
     const cards = document.querySelectorAll(".swot-item, .pestel-item");
 
-    // Ajouter un effet de survol à chaque carte
+    // Effet d'apparition par glissement et rotation
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "rotateY(0deg) translateY(0)";
+                }
+            });
+        },
+        {
+            threshold: 0.2,
+        }
+    );
+
+    cards.forEach(card => {
+        card.style.opacity = "0";
+        card.style.transform = "rotateY(30deg) translateY(50px)";
+        card.style.transition = "all 0.8s ease-out";
+        observer.observe(card);
+    });
+
+    // Animation au survol des cartes (effet d'ombre dynamique)
     cards.forEach(card => {
         card.addEventListener("mouseenter", () => {
-            card.style.transition = "transform 0.3s ease, background-color 0.3s ease";
-            card.style.transform = "scale(1.05)";
-            card.style.backgroundColor = "#e8f4fc";
-        });
-
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = "scale(1)";
-            card.style.backgroundColor = "#f9f9f9";
-        });
-    });
-
-
-                      
-    // Sélection des cartes et des titres page swot
-    const cards = document.querySelectorAll(".swot-item, .pestel-item");
-    const highlights = document.querySelectorAll(".highlight");
-    const sections = document.querySelectorAll(".swot-grid, .pestel-grid");
-
-    // Effet d'apparition des sections en cascade
-    sections.forEach((section, index) => {
-        section.style.opacity = "0";
-        section.style.transform = "translateY(100px)";
-        section.style.transition = `opacity 1s ease, transform 1s ease ${index * 0.2}s`;
-    });
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
-        });
-    });
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    // Animation dynamique au survol des cartes
-    cards.forEach(card => {
-        card.style.transition = "all 0.5s ease";
-        card.addEventListener("mouseenter", () => {
-            card.style.transform = "rotate3d(1, 1, 0, 10deg) scale(1.1)";
             card.style.boxShadow = "0px 15px 30px rgba(0, 0, 0, 0.3)";
-            card.style.backgroundColor = "#f0faff";
+            card.style.transform = "scale(1.05)";
         });
 
         card.addEventListener("mouseleave", () => {
-            card.style.transform = "rotate3d(0, 0, 0, 0) scale(1)";
             card.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.1)";
-            card.style.backgroundColor = "#f9f9f9";
+            card.style.transform = "scale(1)";
         });
     });
 
-    // Effet pulsant sur les initiales
+    // Ajout d'une animation de fond sur les initiales (Highlight)
+    const highlights = document.querySelectorAll(".highlight");
     highlights.forEach(highlight => {
-        highlight.style.display = "inline-block";
-        highlight.style.transition = "transform 0.5s ease, color 0.5s ease";
+        highlight.style.position = "relative";
+        highlight.style.overflow = "hidden";
+
+        const backgroundEffect = document.createElement("span");
+        backgroundEffect.style.position = "absolute";
+        backgroundEffect.style.top = "50%";
+        backgroundEffect.style.left = "0";
+        backgroundEffect.style.width = "100%";
+        backgroundEffect.style.height = "100%";
+        backgroundEffect.style.backgroundColor = "#ff7a59";
+        backgroundEffect.style.zIndex = "-1";
+        backgroundEffect.style.transform = "translateY(100%)";
+        backgroundEffect.style.transition = "transform 0.4s ease";
+
+        highlight.style.color = "#274770";
+        highlight.appendChild(backgroundEffect);
+
         highlight.addEventListener("mouseenter", () => {
-            highlight.style.transform = "scale(1.5) rotate(-5deg)";
-            highlight.style.color = "#00a676";
+            backgroundEffect.style.transform = "translateY(0)";
+            highlight.style.color = "#ffffff";
         });
 
         highlight.addEventListener("mouseleave", () => {
-            highlight.style.transform = "scale(1) rotate(0deg)";
-            highlight.style.color = "#ff7a59";
+            backgroundEffect.style.transform = "translateY(100%)";
+            highlight.style.color = "#274770";
         });
     });
 
-    // Animation des titres principaux
+    // Effet de soulignement progressif pour les titres
     const titles = document.querySelectorAll("#swot h2, #pestel h2");
     titles.forEach(title => {
-        title.style.position = "relative";
-        title.style.overflow = "hidden";
-
-        const underline = document.createElement("div");
-        underline.style.position = "absolute";
-        underline.style.bottom = "0";
-        underline.style.left = "0";
-        underline.style.width = "100%";
-        underline.style.height = "5px";
-        underline.style.backgroundColor = "#ff7a59";
-        underline.style.transform = "translateX(-100%)";
-        underline.style.transition = "transform 0.5s ease";
-
+        const underline = document.createElement("span");
+        underline.style.display = "block";
+        underline.style.height = "4px";
+        underline.style.width = "0";
+        underline.style.backgroundColor = "#00a676";
+        underline.style.transition = "width 0.5s ease";
         title.appendChild(underline);
 
         title.addEventListener("mouseenter", () => {
-            underline.style.transform = "translateX(0)";
+            underline.style.width = "100%";
         });
 
         title.addEventListener("mouseleave", () => {
-            underline.style.transform = "translateX(-100%)";
+            underline.style.width = "0";
         });
     });
 });
