@@ -237,3 +237,71 @@ function updateContent() {
     element.innerHTML = i18next.t(element.getAttribute('data-i18n'));
   });
 }
+
+// Attendre que le DOM soit entièrement chargé
+document.addEventListener("DOMContentLoaded", () => {
+    // Sélectionner toutes les cartes SWOT et PESTEL
+    const cards = document.querySelectorAll(".swot-item, .pestel-item");
+
+    // Ajouter un effet de survol à chaque carte
+    cards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.style.transition = "transform 0.3s ease, background-color 0.3s ease";
+            card.style.transform = "scale(1.05)";
+            card.style.backgroundColor = "#e8f4fc";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "scale(1)";
+            card.style.backgroundColor = "#f9f9f9";
+        });
+    });
+
+    // Animation des titres au survol
+    const titles = document.querySelectorAll("#swot h2, #pestel h2");
+    titles.forEach(title => {
+        title.addEventListener("mouseenter", () => {
+            title.style.transition = "color 0.3s ease";
+            title.style.color = "#ff7a59";
+        });
+
+        title.addEventListener("mouseleave", () => {
+            title.style.color = "#274770";
+        });
+    });
+
+    // Animation des initiales des titres (S, W, O, T, etc.)
+    const highlights = document.querySelectorAll(".highlight");
+    highlights.forEach(highlight => {
+        highlight.style.transition = "color 0.3s ease, transform 0.3s ease";
+        highlight.addEventListener("mouseenter", () => {
+            highlight.style.color = "#00a676";
+            highlight.style.transform = "scale(1.2)";
+        });
+        highlight.addEventListener("mouseleave", () => {
+            highlight.style.color = "#ff7a59";
+            highlight.style.transform = "scale(1)";
+        });
+    });
+
+    // Animation au scroll pour faire apparaître les sections progressivement
+    const sections = document.querySelectorAll(".swot-item, .pestel-item");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    sections.forEach(section => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(50px)";
+        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(section);
+    });
+});
+
