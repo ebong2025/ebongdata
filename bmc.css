@@ -188,7 +188,6 @@ nav {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    opacity: 0;
     animation: fadeInUp 1.2s ease-out forwards;
     animation-delay: 0.3s;
 }
