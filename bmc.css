@@ -315,7 +315,7 @@ h2 {
 /* Responsive */
 @media (max-width: 992px) {
     .bmc-content {
-        padding: 2rem;
+        padding: 0px;
     }
 
     h1 {
@@ -358,9 +358,11 @@ h2 {
     }
 
     .bmc-content {
-        padding: 1.5rem;
         border-radius: 8px;
     }
+  .bmc-section ul {
+    width: 95%;
+  }
 
     .video-section {
         margin-top: 3rem;
