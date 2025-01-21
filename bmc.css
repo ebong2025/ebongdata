@@ -189,6 +189,7 @@ nav {
     padding: 3rem;
     width: fit-content;
     box-shadow: var(--shadow);
+    margin-top: 100px;
 }
 
 /* Titres */
