@@ -370,6 +370,62 @@ h2 {
     }
 }
 
+/* Styles spécifiques au contenu */
+.bmc-text {
+    line-height: 1.7;
+    color: #4a5568;
+}
+
+.bmc-text p {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+}
+
+.bmc-text ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.bmc-text li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.bmc-text a {
+    color: #e53e3e;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.bmc-text a:hover {
+    color: #274770;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+    .bmc-text {
+        font-size: 0.95rem;
+    }
+    
+    .bmc-text h2 {
+        font-size: 1.4rem;
+    }
+    
+    .bmc-text li {
+        margin-bottom: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bmc-text ul {
+        padding-left: 1rem;
+    }
+    
+    .bmc-text li {
+        padding-left: 0.5rem;
+    }
+}
+
 /* Footer */
 
 footer {
