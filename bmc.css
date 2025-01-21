@@ -180,12 +180,14 @@ nav {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
+    width: 95%;
 }
 
 .bmc-content {
     background: var(--background);
     border-radius: 12px;
     padding: 3rem;
+    width: fit-content;
     box-shadow: var(--shadow);
 }
 
