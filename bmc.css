@@ -485,26 +485,3 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
-    .bmc-content {
-        padding: 2rem;
-        margin: 1rem;
-    }
-    
-    h1 {
-        font-size: 2rem;
-    }
-  @media (max-width: 480px) {
-    .bmc-content {
-        padding: 1.5rem;
-    }
-    
-    h1 {
-        font-size: 1.75rem;
-    }
-    
-    .bmc-message p {
-        font-size: 1rem;
-    }
-}
-}
