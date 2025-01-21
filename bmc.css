@@ -382,7 +382,7 @@ h2 {
 
 .bmc-section {
     animation: fadeIn 0.6s ease-out forwards;
-    width: 95%;
+    width: fit-content;
 }
 /* Footer */
 
