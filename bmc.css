@@ -180,7 +180,7 @@ nav {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
-    width: 95%;
+  
 }
 
 .bmc-content {
@@ -216,6 +216,7 @@ h2 {
     background: var(--section-bg);
     border-radius: 8px;
     transition: transform 0.3s ease;
+    width: 95%;
 }
 
 .bmc-section:hover {
