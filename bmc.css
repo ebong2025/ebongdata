@@ -330,6 +330,12 @@ a {
     h2 {
         font-size: 1.6rem;
     }
+  .download-section {
+    text-align: center;
+  }
+  .download-btn {
+    width: fit-content;
+  }
 }
 
 @media (max-width: 768px) {
