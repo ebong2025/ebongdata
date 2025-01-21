@@ -235,7 +235,7 @@ h2 {
 }
 
 a {
-  color: #4a90e2;
+  color: #00c2ff;
   font-weight: bold;
 }
 
@@ -330,6 +330,12 @@ a {
     h2 {
         font-size: 1.6rem;
     }
+  .download-btn {
+    width: fit-content;
+  }
+   .download-section {
+    width: fit-content;
+  }
 }
 
 @media (max-width: 768px) {
@@ -348,6 +354,9 @@ a {
     .download-btn {
         padding: 1rem 2rem;
         font-size: 1rem;
+    }
+  .bmc-content {
+        padding: 20px;
     }
 }
 
