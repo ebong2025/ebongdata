@@ -234,7 +234,7 @@ h2 {
 }
 
 .highlight {
-    color: var(--secondary);
+    color: #4a90e2;
     font-weight: 700;
     display: inline-block;
     margin-right: 0.3rem;
