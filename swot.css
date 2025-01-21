@@ -200,19 +200,20 @@ nav {
     gap: 20px;
 }
 
-/* Cartes SWOT et PESTEL */
 .swot-item, .pestel-item {
     background-color: #f9f9f9;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Invisible au départ */
+    transform: translateY(50px); /* Légèrement décalé vers le bas */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Animation fluide */
 }
 
-.swot-item:hover, .pestel-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: #e8f4fc;
+/* Effet d'apparition lorsque l'élément est visible */
+.swot-item.appear, .pestel-item.appear {
+    opacity: 1; /* Complètement visible */
+    transform: translateY(0); /* Revenir à sa position normale */
 }
 
 /* Titres des cartes avec initiales */
