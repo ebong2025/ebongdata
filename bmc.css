@@ -198,7 +198,6 @@ nav {
     padding: 3rem;
     box-shadow: 0 5px 25px rgba(0,0,0,0.08);
     transform: translateY(20px);
-    opacity: 0;
     animation: fadeInUp 0.8s ease-out forwards;
     animation-delay: 0.5s;
 }
@@ -210,7 +209,6 @@ h1 {
     margin: 2rem 0;
     text-transform: uppercase;
     letter-spacing: 1px;
-    opacity: 0;
     animation: fadeInUp 0.6s ease-out forwards;
     animation-delay: 0.7s;
 }
@@ -221,7 +219,6 @@ h2 {
     margin: 3rem 0 1.5rem;
     padding-bottom: 0.8rem;
     border-bottom: 3px solid #e8e5df;
-    opacity: 0;
     transform: translateX(-30px);
     animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -237,7 +234,6 @@ h2 {
     line-height: 1.7;
     font-size: 1.1rem;
     color: #4a5568;
-    opacity: 0;
     transform: translateX(50px);
     transition: all 0.6s ease-out;
 }
