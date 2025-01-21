@@ -234,6 +234,11 @@ h2 {
     line-height: 1.7;
 }
 
+a {
+  color: #4a90e2;
+  font-weight: bold;
+}
+
 .highlight {
     color: #4a90e2;
     font-weight: 700;
