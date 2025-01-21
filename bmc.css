@@ -222,26 +222,6 @@ h2 {
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Listes */
-.bmc-text ul {
-    margin-left: 2.5rem;
-    list-style: square;
-}
-
-.bmc-text li {
-    margin-bottom: 1.2rem;
-    line-height: 1.7;
-    font-size: 1.1rem;
-    color: #4a5568;
-    transform: translateX(50px);
-    transition: all 0.6s ease-out;
-}
-
-.bmc-text li.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 /* Bouton PDF */
 .download-btn-container {
     text-align: center;
@@ -359,10 +339,6 @@ h2 {
     h1 {
         font-size: 1.8rem;
         animation-delay: 0.5s;
-    }
-    
-    .bmc-text ul {
-        margin-left: 1.5rem;
     }
     
     .video-container {
