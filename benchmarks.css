@@ -262,7 +262,7 @@ p {
 /* === Iframes Vidéos === */
 #videos li iframe {
     width: 100%;           /* Largeur maximale du conteneur */
-    height: 800px;         /* Hauteur fixe comme dans le HTML */
+    height: 500px;         /* Hauteur fixe comme dans le HTML */
     border-radius: 10px;   /* Coins arrondis */
     overflow: hidden;      /* Cache les débordements */
 }
