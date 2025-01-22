@@ -246,7 +246,7 @@ nav {
 }
 
 /* Responsive Design */
-@media (max-width: 1050px) {
+@media (max-width: 1300px) {
     .swot-grid, .pestel-grid {
         grid-template-columns: 1fr;
     }
