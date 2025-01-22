@@ -34,34 +34,122 @@
     <!-- main part of the body starts here -->
     <main id="main">
       <div class="folders"><h1 id="folders">Documents</h1></div>
-        <div class="filters-container">
-        
-    <button class="filter-btn active" data-filter="all">Général</button>
-    <button class="filter-btn" data-filter="uxui">UX/UI</button>
-    <button class="filter-btn" data-filter="marketing">Marketing</button>
-    <button class="filter-btn" data-filter="finance">Finance</button>
-</div>
 
-      <!-- Remplacez chaque bouton avec le data-filter approprié -->
-<button class="document-btn" data-filter="uxui" onclick="location.href='roadmap.html'">Roadmap</button>
-<button class="document-btn" data-filter="marketing" onclick="location.href='bmc.html'">BMC</button>
-<button class="document-btn" data-filter="marketing" onclick="location.href='benchmarks.html'">Benchmarks</button>
-<button class="document-btn" data-filter="uxui" onclick="location.href='protos-personnas.html'">Proto personas</button>
-<button class="document-btn" data-filter="uxui" onclick="location.href='grille.html'">Grille de recrutement</button>
-<button class="document-btn" data-filter="uxui" onclick="location.href='plan.html'">Plan opérationnel UX</button>
-<button class="document-btn" data-filter="marketing" onclick="location.href='404.html'">Plan Marketing</button>
-<button class="document-btn" data-filter="marketing" onclick="location.href='404.html'">Matrice d'effort</button>
-<button class="document-btn" data-filter="marketing" onclick="location.href='swot.html'">SWOT & PESTEL</button>
-<button class="document-btn" data-filter="uxui" onclick="location.href='experience-utilisateur.html'">Expérience Utilisateur</button>
-<button class="document-btn" data-filter="finance" onclick="location.href='volet.html'">Volet Financier</button>
-<button class="document-btn" data-filter="marketing" onclick="location.href='canaux-communication.html'">Canaux de Communication</button>
-<button class="document-btn" data-filter="uxui" onclick="location.href='404.html'">MOST</button>
-<button class="document-btn" data-filter="marketing" onclick="location.href='action-marketing.html'">Action Marketing</button>
-<button class="document-btn" data-filter="marketing" onclick="location.href='QQOQCCP.html'">QQQOQCCP</button>
-<button class="document-btn" data-filter="uxui" onclick="location.href='404.html'">User journey maps</button>
-<button class="document-btn" data-filter="uxui" onclick="location.href='404.html'">Stratégie UX</button>
-<button class="document-btn" data-filter="uxui" onclick="location.href='404.html'">Personnalisation UI/UX</button>
-<button class="document-btn" data-filter="all" onclick="location.href='404.html'">Synthèse projet</button>
+      <div class="buttons-container">
+        <button class="document-btn" onclick="location.href='roadmap.html'">
+          Roadmap
+        </button>
+        <button
+        class="document-btn"
+        onclick="location.href='bmc.html'"
+      >
+        BMC
+      </button>
+      <button
+      class="document-btn"
+      onclick="location.href='benchmarks.html'"
+    >
+      Benchmarks
+    </button>
+      <button
+      class="document-btn"
+      onclick="location.href='protos-personnas.html'"
+    >
+      Proto personas
+    </button>
+    <button
+    class="document-btn"
+    onclick="location.href='grille.html'"
+  >
+  Grille de recrutement
+  </button>
+        <button
+          class="document-btn"
+          onclick="location.href='plan.html'"
+        >
+           Plan opérationnel UX
+        </button>
+         <button
+          class="document-btn"
+          onclick="location.href='404.html'"
+        >
+          Plan Marketing
+        </button>
+        <button
+          class="document-btn"
+          onclick="location.href='404.html'"
+        >
+          Matrice d'effort
+        </button>
+        <button class="document-btn" onclick="location.href='swot.html'">
+          SWOT & PESTEL
+        </button>
+        
+        <button
+          class="document-btn"
+          onclick="location.href='experience-utilisateur.html'"
+        >
+          Expérience Utilisateur
+        </button>
+        <button
+          class="document-btn"
+          onclick="location.href='volet.html'"
+        >
+          Volet Financier
+        </button>
+        <button
+          class="document-btn"
+          onclick="location.href='canaux-communication.html'"
+        >
+          Canaux de Communication
+        </button>
+        <button
+        class="document-btn"
+        onclick="location.href='404.html'"
+      >
+        MOST
+      </button>
+        <button
+          class="document-btn"
+          onclick="location.href='action-marketing.html'"
+        >
+          Action Marketing
+        </button>
+        <button
+        class="document-btn"
+        onclick="location.href='QQOQCCP.html'"
+      >
+      QQQOQCCP
+      </button>
+      <button
+      class="document-btn"
+      onclick="location.href='404.html'"
+    >
+    User journey maps
+    </button>
+         <button
+      class="document-btn"
+      onclick="location.href='404.html'"
+    >
+    Stratégie UX
+    </button>
+           </button>
+         <button
+      class="document-btn"
+      onclick="location.href='404.html'"
+    >
+    Personnalisation UI/UX
+    </button>
+         </button>
+           </button>
+         <button
+      class="document-btn"
+      onclick="location.href='404.html'"
+    >
+    Synthèse projet
+    </button>
+      </div>
+
       <h1 id="footages">Visuels</h1>
 
       <div class="visuels-container">
@@ -80,27 +168,6 @@
       </nav>
       <div class="Ndop"></div>
     </footer>
-      
-<script>
-// Filtrage
-document.querySelectorAll('.filter-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        filterDocuments(button.dataset.filter);
-    });
-});
-
-function filterDocuments(filter) {
-    document.querySelectorAll('.document-btn').forEach(btn => {
-        btn.style.display = (filter === 'all' || btn.dataset.filter === filter) 
-            ? 'flex' 
-            : 'none';
-    });
-}
-</script>
-
     <script src="script.js"></script>
   </body>
 </html>
-
