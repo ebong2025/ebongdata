@@ -247,35 +247,29 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 
   // Configuration des catégories filtres
 const filterMap = {
-    ux: ['Roadmap', 'Proto personas', 'Grille de recrutement', 'Plan opérationnel UX', 
-        'Expérience Utilisateur', 'MOST', 'User journey maps', 'Stratégie UX', 
-        'Personnalisation UI/UX'],
-    marketing: ['BMC', 'Benchmarks', 'Plan Marketing', 'Matrice d\'effort', 
-               'SWOT & PESTEL', 'Canaux de Communication', 'Action Marketing', 
-               'QQQOQCCP'],
-    finance: ['Volet Financier'],
-    all: ['Synthèse projet']
+    ux: ["Roadmap", "Proto personas", "Grille de recrutement", "Plan opérationnel UX", 
+        "Expérience Utilisateur", "MOST", "User journey maps", "Stratégie UX", 
+        "Personnalisation UI/UX"],
+    marketing: ["BMC", "Benchmarks", "Plan Marketing", "Matrice d'effort", 
+                "SWOT & PESTEL", "Canaux de Communication", "Action Marketing", 
+                "QQQOQCCP"],
+    finance: ["Volet Financier"],
+    all: ["Synthèse projet"]
 };
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
+        // Supprime la classe active de tous les boutons
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        btn.classList.add('active'); // Ajoute la classe active au bouton cliqué
         
         const category = btn.dataset.category;
         const buttons = document.querySelectorAll('.document-btn');
         
         buttons.forEach(button => {
             const text = button.textContent.trim();
-            const show = category === 'all' || filterMap[category]?.includes(text);
+            const show = category === 'all' || (filterMap[category] && filterMap[category].includes(text));
             button.style.display = show ? 'flex' : 'none';
         });
     });
 });
-
-function filterDocuments(filter) {
-    document.querySelectorAll('.document-btn').forEach(btn => {
-        // ... votre logique existante ...
-        btn.dataset.visible = (filter === 'all' || /* condition */); // ← Ajouter cette ligne
-    });
-}
