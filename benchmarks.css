@@ -284,11 +284,19 @@ h3 {
 
 
 /* ======== Responsive ======== */
-@media (max-width: 992px) {
+@media (max-width: 1050px) {
     .benchmark-content {
         padding: 2rem;
-        width: 100%;
+        width: fit-content;
     }
+
+   .plateform {
+        padding: 2rem;
+        width: 80%;
+    }
+  p {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 768px) {
