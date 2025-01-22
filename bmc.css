@@ -235,7 +235,7 @@ h2 {
 }
 
 a {
-  color: #00c2ff;
+  color: #0093ff;
   font-weight: bold;
 }
 
@@ -334,7 +334,7 @@ a {
     width: fit-content;
   }
    .download-section {
-    width: fit-content;
+    text-align: center;
   }
 }
 
