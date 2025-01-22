@@ -203,6 +203,7 @@ section {
     background: var(--section-bg);
     padding: 2rem;
     margin: 2rem 0;
+    width: fit-content;
     transition: transform 0.3s ease;
 }
 
