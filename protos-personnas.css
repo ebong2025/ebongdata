@@ -310,6 +310,15 @@ audio {
   border: none;
 }
 
+.explanation {
+  width: fit-content;
+}
+
+.explanation ul {
+
+  width: fit-content;
+}
+
 /* footer */
 
 footer {
