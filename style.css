@@ -319,59 +319,6 @@ h1#footages {
         opacity 0.3s ease-in-out,
         transform 0.3s ease-in-out;
 }
-
-/* Cache les boutons de manière animée */
-.document-btn:not([data-visible="true"]) {
-    opacity: 0;
-    transform: translateY(-15px);
-    height: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    pointer-events: none;
-}
-
-/* Responsive pour tablettes */
-@media (max-width: 768px) {
-    .filters-container {
-        margin: 0 20px 15px;
-        gap: 10px;
-    }
-    
-    .filter-btn {
-        padding: 8px 20px;
-        font-size: 18px;
-    }
-}
-
-/* Responsive pour mobiles */
-@media (max-width: 480px) {
-    .filters-container {
-        flex-direction: column;
-        margin: 0 15px 10px;
-        gap: 8px;
-    }
-    
-    .filter-btn {
-        width: 100%;
-        padding: 12px 15px;
-        font-size: 16px;
-        text-align: center;
-    }
-    
-    .filter-btn.active {
-        transform: none; /* Désactive le scale sur mobile */
-    }
-}
-
-/* Petit ajustement pour très petits écrans */
-@media (max-width: 320px) {
-    .filter-btn {
-        font-size: 14px;
-        padding: 10px 12px;
-    }
-}
-
 /* footer */
 
 footer {
