@@ -181,7 +181,7 @@ nav {
     text-transform: uppercase;
     font-weight: bold;
     color: #274770;
-    border-bottom: 3px solid #ff7a59;
+    border-bottom: 3px solid #0093ff;
     display: inline-block;
     padding-bottom: 10px;
 }
@@ -225,7 +225,7 @@ nav {
 .highlight {
     font-size: 2rem;
     font-weight: bold;
-    color: #ff7a59;
+    color: #0093ff;
 }
 
 /* Texte des cartes */
