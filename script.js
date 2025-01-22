@@ -220,13 +220,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Configuration des catégories filtres
 const filterMap = {
-    all: [
-        'Roadmap', 'BMC', 'Benchmarks', 'Proto personas', 'Grille de recrutement',
-        'Plan opérationnel UX', 'Plan Marketing', 'Matrice d\'effort', 'SWOT & PESTEL',
-        'Expérience Utilisateur', 'Volet Financier', 'Canaux de Communication', 'MOST',
-        'Action Marketing', 'QQQOQCCP', 'User journey maps', 'Stratégie UX',
-        'Personnalisation UI/UX', 'Synthèse projet'
-    ],
     ux: ['Roadmap', 'Proto personas', 'Grille de recrutement', 'Plan opérationnel UX', 
         'Expérience Utilisateur', 'MOST', 'User journey maps', 'Stratégie UX', 
         'Personnalisation UI/UX'],
@@ -234,7 +227,7 @@ const filterMap = {
                'SWOT & PESTEL', 'Canaux de Communication', 'Action Marketing', 
                'QQQOQCCP'],
     finance: ['Volet Financier'],
-    conclusion: ['Synthèse projet']
+    all: ['Synthèse projet']
 };
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -252,7 +245,6 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
         });
     });
 });
-
   // Effet smooth filter
 function filterDocuments(filter) {
     document.querySelectorAll('.document-btn').forEach(btn => {
@@ -260,12 +252,3 @@ function filterDocuments(filter) {
         btn.dataset.visible = (filter === 'all' || /* condition */); // ← Ajouter cette ligne
     });
 }
-
-// Fermer le menu burger quand on clique sur un filtre
-document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        if(window.innerWidth <= 1050) {
-            document.querySelector('.Ebong_nav ul').classList.remove('open');
-        }
-    });
-});
