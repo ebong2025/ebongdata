@@ -162,29 +162,6 @@ nav {
 }
 
 /* Début main part */
-@import url("https://use.typekit.net/vfw6aqb.css");
-@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap");
-
-/* === Reset & Global Styles (identique à bmc.css) === */
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-  font-family: 'Darker Grotesque', sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: white;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
 /* === Conteneur principal (comme .bmc-container) === */
 .benchmark-container {
   max-width: 1200px;
