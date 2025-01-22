@@ -295,7 +295,15 @@ h3 {
         width: 80%;
     }
   p {
-    font-size: 10px;
+    font-size: 15px;
+  }
+
+  .strength {
+    font-size: 15px;
+  }
+
+  .weakness {
+    font-size: 15px;
   }
 }
 
