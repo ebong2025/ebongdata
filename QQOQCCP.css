@@ -325,14 +325,6 @@ footer {
     font-size: 1rem;
   }
 
-  .qqo-content {
-      width: 90%;
-      margin-top: 0px;
-  }
-
-  body {
-      width: 92%;
-  }
 }
 
 @media (max-width: 1050px) {
