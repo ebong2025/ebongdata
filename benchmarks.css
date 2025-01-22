@@ -305,6 +305,10 @@ h3 {
   .weakness {
     font-size: 15px;
   }
+
+  #videos li iframe {
+    height: 200px;
+  }
 }
 
 @media (max-width: 768px) {
