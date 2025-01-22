@@ -256,10 +256,16 @@ h2 {
 }
 
 strong {
-  color: #1E293B;
+  color: #0093ff;
   font-weight: 700;
 }
-
+.content p {
+ color: #274770;
+  
+}
+.content li {
+   color: #274770;
+}
 em {
   display: block;
   margin: 1.2rem 0;
