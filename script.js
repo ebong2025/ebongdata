@@ -254,3 +254,12 @@ function filterDocuments(filter) {
         btn.dataset.visible = (filter === 'all' || /* condition */); // ← Ajouter cette ligne
     });
 }
+
+// Fermer le menu burger quand on clique sur un filtre
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        if(window.innerWidth <= 1050) {
+            document.querySelector('.Ebong_nav ul').classList.remove('open');
+        }
+    });
+});
