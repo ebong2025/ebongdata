@@ -309,6 +309,28 @@ h1#footages {
   border: none; /* Supprime la bordure en hover */
 }
 
+/* Ajoutez ces règles dans style.css */
+.buttons-container {
+    transition: all 0.4s ease;
+}
+
+.document-btn {
+    transition: 
+        opacity 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
+}
+
+/* Cache les boutons de manière animée */
+.document-btn:not([data-visible="true"]) {
+    opacity: 0;
+    transform: translateY(-15px);
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    pointer-events: none;
+}
+
 /* footer */
 
 footer {
