@@ -220,6 +220,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Configuration des catégories filtres
 const filterMap = {
+    all: [
+        'Roadmap', 'BMC', 'Benchmarks', 'Proto personas', 'Grille de recrutement',
+        'Plan opérationnel UX', 'Plan Marketing', 'Matrice d\'effort', 'SWOT & PESTEL',
+        'Expérience Utilisateur', 'Volet Financier', 'Canaux de Communication', 'MOST',
+        'Action Marketing', 'QQQOQCCP', 'User journey maps', 'Stratégie UX',
+        'Personnalisation UI/UX', 'Synthèse projet'
+    ],
     ux: ['Roadmap', 'Proto personas', 'Grille de recrutement', 'Plan opérationnel UX', 
         'Expérience Utilisateur', 'MOST', 'User journey maps', 'Stratégie UX', 
         'Personnalisation UI/UX'],
