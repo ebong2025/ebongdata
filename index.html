@@ -81,30 +81,25 @@
       <div class="Ndop"></div>
     </footer>
       
-      <script>
+<script>
+// Filtrage
 document.querySelectorAll('.filter-btn').forEach(button => {
     button.addEventListener('click', () => {
-        // Retire la classe active de tous les boutons
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-        // Ajoute la classe active au bouton cliqué
         button.classList.add('active');
-        
-        const filter = button.dataset.filter;
-        filterDocuments(filter);
+        filterDocuments(button.dataset.filter);
     });
 });
 
 function filterDocuments(filter) {
     document.querySelectorAll('.document-btn').forEach(btn => {
-        const btnFilter = btn.dataset.filter || 'all';
-        if(filter === 'all' || btnFilter.includes(filter)) {
-            btn.style.display = 'flex';
-        } else {
-            btn.style.display = 'none';
-        }
+        btn.style.display = (filter === 'all' || btn.dataset.filter === filter) 
+            ? 'flex' 
+            : 'none';
     });
 }
 </script>
+
     <script src="script.js"></script>
   </body>
 </html>
