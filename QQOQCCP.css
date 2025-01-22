@@ -176,6 +176,7 @@ nav {
 .animate-section.active {
   opacity: 1;
   transform: translateY(0);
+  width: fit-content;
 }
 
 /* Couleurs par section */
