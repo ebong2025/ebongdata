@@ -162,7 +162,6 @@ nav {
 }
 
 /* Début main part */
-/* === Conteneur principal (comme .bmc-container) === */
 .benchmark-container {
   max-width: 1200px;
   margin: 100px auto 2rem; /* Marge identique */
