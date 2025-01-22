@@ -228,6 +228,7 @@ const filterMap = {
                'QQQOQCCP'],
     finance: ['Volet Financier'],
     all: ['Synthèse projet']
+    conclusion: ['Synthèse projet'],
 };
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
