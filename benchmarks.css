@@ -245,6 +245,21 @@ section {
     box-shadow: var(--shadow);
 }
 
+/* === Images des plateformes === */
+.platform img {
+    width: 100px;          /* Taille fixe en pixels */
+    height: auto;          /* Maintien des proportions */
+    margin-bottom: 15px;   /* Espacement sous l'image */
+}
+
+/* === Iframes Vidéos === */
+#videos li iframe {
+    width: 100%;           /* Largeur maximale du conteneur */
+    height: 315px;         /* Hauteur fixe comme dans le HTML */
+    border-radius: 10px;   /* Coins arrondis */
+    overflow: hidden;      /* Cache les débordements */
+}
+
 /* ======== Responsive ======== */
 @media (max-width: 992px) {
     .benchmark-content {
