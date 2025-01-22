@@ -453,4 +453,14 @@ footer {
   .Ndop {
     background-size: 1500px;
   }
+
+  body {
+
+    width: 95%;
+  }
+
+    header {
+
+    width: 104%;
+  }
 }
