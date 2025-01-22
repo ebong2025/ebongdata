@@ -188,7 +188,7 @@ nav {
     min-height: 90vh;         /* Hauteur minimale pour un effet "géant" */
     margin: 0 auto;
     padding: 3rem;
-    box-shadow: var(--shadow); /* Ombre identique à bmc.css */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 0;         /* Supprime les coins arrondis pour un carré */
 }
 
@@ -255,7 +255,7 @@ section {
 /* === Iframes Vidéos === */
 #videos li iframe {
     width: 100%;           /* Largeur maximale du conteneur */
-    height: 315px;         /* Hauteur fixe comme dans le HTML */
+    height: 800px;         /* Hauteur fixe comme dans le HTML */
     border-radius: 10px;   /* Coins arrondis */
     overflow: hidden;      /* Cache les débordements */
 }
