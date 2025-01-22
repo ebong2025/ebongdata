@@ -227,7 +227,7 @@ const filterMap = {
                'SWOT & PESTEL', 'Canaux de Communication', 'Action Marketing', 
                'QQQOQCCP'],
     finance: ['Volet Financier'],
-    conclusion: ['Synthèse projet'],
+    conclusion: ['Synthèse projet']
 };
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
