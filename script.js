@@ -37,23 +37,24 @@ menuToggle.addEventListener("click", () => {
 });
 
 // Sélectionne tous les boutons des documents et visuels
-const buttons = document.querySelectorAll(".document-btn, .visuel-btn");
+const hoverButtons = document.querySelectorAll(".document-btn, .visuel-btn");
 
-// Effet général pour tous les boutons
-buttons.forEach((button) => {
-  button.addEventListener("mouseover", () => {
-    button.style.transition =
-      "transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out";
-    button.style.transform = "scale(1.1)";
-  });
+function resetStyles(button) { /* ... */ }
 
-  button.addEventListener("mouseleave", () => {
-    button.style.transition =
-      "transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out";
-    button.style.transform = "scale(1)";
-  });
+hoverButtons.forEach((button) => { /* ... */ });
+
+// PAR :
+const hoverButtons = document.querySelectorAll(".document-btn, .visuel-btn");
+
+hoverButtons.forEach((button) => {
+    button.addEventListener("mouseover", () => {
+        if (window.innerWidth > 1300) button.style.transform = "scale(1.1)";
+    });
+
+    button.addEventListener("mouseleave", () => {
+        if (window.innerWidth > 1300) button.style.transform = "scale(1)";
+    });
 });
-
 // Sélectionne à nouveau les boutons pour la logique responsive
 const hoverButtons = document.querySelectorAll(".document-btn, .visuel-btn");
 
