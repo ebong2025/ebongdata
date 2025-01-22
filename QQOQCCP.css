@@ -1,0 +1,356 @@
+@import url("https://use.typekit.net/vfw6aqb.css");
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: fit-content;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(162, 164, 170, 0.571);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #274770;
+  border-radius: 6px;
+}
+
+body {
+  background-color: white;
+  scrollbar-width: 20px;
+  overflow-x: hidden;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* loading animation */
+
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#loading img {
+  width: 100px;
+  animation: grow 2s linear infinite;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(2.2);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+/* Masquer le loader lorsque la page est prête */
+body.loading {
+  overflow: hidden; /* Désactiver le scroll pendant le chargement */
+}
+
+body.loaded #loading {
+  display: none;
+}
+
+/* navbar */
+
+#menu-toggle {
+  display: none;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  background-color: white;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  z-index: 2;
+}
+
+header::before {
+  display: none;
+  content: url("Ndop haut.svg");
+  position: absolute;
+  margin-bottom: 4000px;
+  left: 0;
+  height: 10px;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  font-family: "Darker Grotesque", serif;
+}
+
+.logo {
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+  padding-top: 20px;
+  width: 70%;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.Ebong_nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  margin: 20px;
+}
+
+.Ebong_nav ul li {
+  display: flex;
+  width: 50px-;
+  margin: 20px;
+  height: 100%;
+}
+
+.Ebong_nav ul li a {
+  font-weight: 600;
+  width: 100%;
+  color: #274770;
+  text-align: center;
+  font-size: 25px;
+  transition: text-decoration-color 1.3s ease,
+    text-decoration-thickness 0.3s ease;
+}
+
+.Ebong_nav ul li a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: #e8e5df;
+  color: #426593;
+}
+
+/* Animations */
+.animate-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin: 4rem auto;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  max-width: 1200px;
+}
+
+.animate-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Couleurs par section */
+.qui { 
+  background: #EFF8FF;
+  border-left: 6px solid #3B82F6;
+}
+
+.quoi { 
+  background: #F0FDF4;
+  border-left: 6px solid #22C55E;
+}
+
+.ou { 
+  background: #FFF7ED;
+  border-left: 6px solid #F97316;
+}
+
+.quand { 
+  background: #F5F3FF;
+  border-left: 6px solid #8B5CF6;
+}
+
+.comment { 
+  background: #FEF2F2;
+  border-left: 6px solid #EF4444;
+}
+
+.combien { 
+  background: #ECFDF5;
+  border-left: 6px solid #10B981;
+}
+
+.pourquoi { 
+  background: #F0F9FF;
+  border-left: 6px solid #0EA5E9;
+}
+
+.conclusion {
+  background: #F8FAFC;
+  border-left: 6px solid #64748B;
+}
+
+/* Typographie */
+h1 {
+  font-size: 2.8rem;
+  color: #1E293B;
+  margin: 4rem 0;
+  text-align: center;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: 2rem;
+  color: inherit;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+}
+
+.content {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+strong {
+  color: #1E293B;
+  font-weight: 700;
+}
+
+em {
+  display: block;
+  margin: 1.2rem 0;
+  padding: 1rem;
+  background: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  font-style: italic;
+  color: #475569;
+  border-left: 3px solid currentColor;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .animate-section {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 3rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .logo {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 50px;
+  }
+
+  #menu-toggle {
+    display: block;
+    background-color: transparent;
+    width: 50px;
+    height: 100px;
+    margin-right: 60px;
+    border: none;
+    max-width: 20%;
+  }
+
+  .Ebong_nav ul {
+    position: fixed;
+    top: 90px;
+    right: -100%;
+    width: 200px;
+    height: calc(100% - 60px);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    margin: 10px;
+  }
+
+  .Ebong_nav ul.open {
+    right: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .Ebong_nav li {
+    height: 50%;
+  }
+
+  .Ebong_nav ul li a {
+    display: block;
+    padding: 20px 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: 50%;
+    text-align: left;
+  }
+
+  .Ebong_nav ul li a:hover {
+    background-color: #274770;
+    color: white;
+    text-decoration: none;
+  }
+
+  footer {
+    font-size: 15px;
+  }
+
+  .Ndop {
+    background-size: 1500px;
+  }
+}
+
