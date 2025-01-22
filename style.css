@@ -319,6 +319,28 @@ h1#footages {
         opacity 0.3s ease-in-out,
         transform 0.3s ease-in-out;
 }
+
+/* Animation d'entrée/sortie */
+.document-btn {
+  transition: 
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* État caché */
+.document-btn[data-visible="false"] {
+  opacity: 0 !important;
+  transform: translateY(-15px) !important;
+  pointer-events: none;
+}
+
+/* Optimisation pour le conteneur */
+.buttons-container {
+  transition: grid-auto-rows 0.3s ease;
+  grid-auto-rows: 1fr;
+}
 /* footer */
 
 footer {
