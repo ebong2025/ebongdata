@@ -7,7 +7,6 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
-  width: 100%;
 }
 
 html {
@@ -268,7 +267,7 @@ h1#footages {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: -1; /* Boutons en arrière-plan */
+  z-index: 1; /* Boutons en arrière-plan */
   overflow: hidden;
 }
 
@@ -293,7 +292,7 @@ h1#footages {
   height: 100%;
   border-radius: 50px;
   background: linear-gradient(120deg, #4a90e2, #274770);
-  z-index: -2;
+  z-index: -1;
   opacity: 0;
   transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
   transform: scaleX(0);
