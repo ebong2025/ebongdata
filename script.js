@@ -245,11 +245,4 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
         });
     });
 });
-  // Effet smooth filter
-function filterDocuments(filter) {
-    document.querySelectorAll('.document-btn').forEach(btn => {
-        // ... votre logique existante ...
-        btn.dataset.visible = (filter === 'all' || /* condition */); // ← Ajouter cette ligne
-    });
-}
 
