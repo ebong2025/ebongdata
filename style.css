@@ -331,6 +331,47 @@ h1#footages {
     pointer-events: none;
 }
 
+/* Responsive pour tablettes */
+@media (max-width: 768px) {
+    .filters-container {
+        margin: 0 20px 15px;
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 20px;
+        font-size: 18px;
+    }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+    .filters-container {
+        flex-direction: column;
+        margin: 0 15px 10px;
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .filter-btn.active {
+        transform: none; /* Désactive le scale sur mobile */
+    }
+}
+
+/* Petit ajustement pour très petits écrans */
+@media (max-width: 320px) {
+    .filter-btn {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
+
 /* footer */
 
 footer {
@@ -355,6 +396,7 @@ footer {
   background-size: 2000px;
   height: 20px;
 }
+
 
 /* responsive part */
 
