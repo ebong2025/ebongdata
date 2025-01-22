@@ -179,6 +179,15 @@ nav {
 }
 
 /* Couleurs par section */
+
+.qqo-content {
+ 
+    padding: 3rem;
+    width: fit-content;
+    margin-top: 100px;
+  font-family: 'Darker Grotesque', sans-serif;
+  
+}
 .qui { 
   background: #EFF8FF;
   border-left: 6px solid #3B82F6;
@@ -208,6 +217,7 @@ nav {
   background: #ECFDF5;
   border-left: 6px solid #10B981;
 }
+
 
 .pourquoi { 
   background: #F0F9FF;
