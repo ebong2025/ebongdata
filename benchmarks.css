@@ -7,6 +7,7 @@
   text-decoration: none;
   list-style: none;
   width: 100%;
+  font-family: 'Darker Grotesque', sans-serif;
 }
 
 html {
@@ -171,15 +172,6 @@ nav {
     --background: #ffffff;
     --section-bg: #f8f9fa;
     --shadow: 0 3px 15px rgba(0,0,0,0.1);
-}
-
-/* ======== Reset ======== */
-* {
-    font-family: 'Darker Grotesque', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 /* ======== Structure BMC ======== */
