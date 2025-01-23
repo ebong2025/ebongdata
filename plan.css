@@ -382,3 +382,16 @@ footer {
     background-size: 1500px;
   }
 }
+
+@media (max-width: 768px) {
+
+
+main {
+  width: 80%;
+}
+
+  h1 {
+    margin-top: 150px;
+  }
+  
+}
