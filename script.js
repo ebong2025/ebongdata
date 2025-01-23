@@ -7,22 +7,6 @@ window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
 
-// password
-
-// Vérifier si l'utilisateur a déjà validé le mot de passe
-if (!localStorage.getItem("authenticated")) {
-  let password = prompt(
-    "Veuillez entrer le mot de passe pour accéder au site :"
-  );
-
-  if (password === "ebongtgvdye547398") {
-    localStorage.setItem("authenticated", "true");
-  } else {
-    alert("Mot de passe incorrect.");
-    window.location = "https://google.com";
-  }
-}
-
 // Alert message js
 
 let currentDownloadUrl = "";
