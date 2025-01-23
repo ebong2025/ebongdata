@@ -298,6 +298,7 @@ h2 {
 @media (max-width: 768px) { /* Tablette */
   #most-analysis {
     padding: 0 10px;
+    width: fit-content;
   }
 
   h2 {
@@ -311,6 +312,7 @@ h2 {
 
   ul, ol {
     padding-left: 1.2rem;
+    width: 80%;
   }
 
   .Ndop {
