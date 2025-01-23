@@ -169,6 +169,8 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
+  font-family: "Darker Grotesque", serif;
+}
 }
 
 .content {
@@ -388,9 +390,6 @@ footer {
 
 .copyrights {
   height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .Ndop {
