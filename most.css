@@ -183,13 +183,12 @@ h2 {
 
 /* Cartes MOST */
 .most-item {
-  background: #f8f9fa;
   border-radius: 12px;
   margin: 25px 0;
   padding: 30px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   border-left: 6px solid;
   transition: transform 0.3s ease;
+  background-color: white;
 }
 
 .mission { border-left-color: #2A5C82; }
