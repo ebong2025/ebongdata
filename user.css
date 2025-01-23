@@ -225,6 +225,7 @@ padding: 0 20px;
 color: #274770;
 font-size: 18px;
 clear: both;
+width: fit-content;
 }
 
 /* Responsive Adjustments */
