@@ -31,6 +31,10 @@ body {
   background-color: white;
   scrollbar-width: 20px;
   overflow-x: hidden;
+  font-family: "Darker Grotesque", sans-serif;
+  color: #274770;
+  line-height: 1.6;
+  background-color: white;
 }
 
 body,
