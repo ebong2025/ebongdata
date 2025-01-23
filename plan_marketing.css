@@ -252,26 +252,130 @@ em {
   margin: 40px 0;
 }
 
-/* Responsive */
+/* plan_marketing.css */
+
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw; /* Contrôle strict de la largeur */
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Conteneur principal */
+main {
+  padding: 20px;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+/* Adaptation responsive globale */
+section {
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  padding: 15px;
+}
+
+/* Grilles responsives */
+.grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* Typographie responsive */
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+p, li {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+/* Boutons */
+.document-btn {
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  padding: 12px 25px;
+  white-space: nowrap;
+}
+
+/* Media Queries spécifiques */
 @media (max-width: 768px) {
   main {
-    padding: 1rem;
+    padding: 10px;
   }
 
   section {
-    padding: 1.5rem;
-    margin: 2rem 0;
+    width: calc(100% - 20px);
+    margin: 15px auto;
+    padding: 10px;
   }
 
-  h1 {
-    font-size: 2rem;
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 
-  h2 {
-    font-size: 1.7rem;
+  .target-group, 
+  .channel-group, 
+  .strategy-group {
+    margin: 10px 0;
+    padding: 10px;
   }
 }
 
+@media (max-width: 480px) {
+  h1 {
+    padding-bottom: 0.5rem;
+  }
+
+  .document-btn {
+    width: 100%;
+    padding: 10px;
+    white-space: normal;
+  }
+
+  em {
+    margin-left: 0;
+    display: inline;
+  }
+}
+
+/* Gestion précise des overflow */
+section, 
+.grid-container, 
+.card, 
+.kpi-item {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Conserve le style original sur grand écran */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+}
 /* Footer */
 
 footer {
