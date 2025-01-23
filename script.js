@@ -7,9 +7,6 @@ window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
 
-// Alert message js
-
-let currentDownloadUrl = "";
 
 // menu burger
 
