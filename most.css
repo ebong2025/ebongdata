@@ -223,6 +223,7 @@ h2 {
   font-size: clamp(1rem, 2vw, 1.1rem);
   position: relative;
   padding-left: 25px;
+  width: fit-content;
 }
 
 .most-item li::before {
@@ -304,6 +305,7 @@ h2 {
   h2 {
     font-size: 1.6rem !important;
     margin: 1.5rem 0 !important;
+    width: fit-content;
   }
 
   .most-item h3 {
