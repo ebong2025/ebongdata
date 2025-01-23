@@ -170,6 +170,7 @@ padding: 0 5%;
 margin: 30px auto;
 max-width: 1400px;
 justify-content: center;
+margin-top: 100px;
 }
 
 .map-card {
@@ -186,14 +187,26 @@ min-width: 300px;
 transform: translateY(-5px);
 }
 
+h1 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  color: #274770;
+  font-family: "Darker Grotesque", serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+}
+
 .map-card h2 {
 font-family: "Darker Grotesque", serif;
 color: #274770;
 padding: 20px;
 margin: 0;
-font-size: 28px;
+font-size: 25px;
 border-bottom: 2px solid #e8e5df;
 text-align: center;
+ text-transform: uppercase;
 }
 
 .map-card iframe {
