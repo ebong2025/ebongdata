@@ -205,9 +205,11 @@ display: block;
 
 .ujm-description {
 max-width: 800px;
+font-family: "Darker Grotesque", serif;
 margin: 50px auto;
 padding: 0 20px;
 color: #333;
+font-size: 18px;
 clear: both;
 }
 
