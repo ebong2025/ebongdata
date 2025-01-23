@@ -305,6 +305,10 @@ em {
     font-size: 1.2rem;
     padding: 1.2rem;
   }
+
+  main {
+ width: 80%;
+  }
 }
 
 /* Responsive Desktop (1024px+) */
