@@ -336,6 +336,7 @@ h2 {
   .most-item {
     border-left-width: 4px;
     padding: 12px 8px !important;
+    width: fit-content;
   }
 
   li {
