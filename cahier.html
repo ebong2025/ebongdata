@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahier des charges fonctionnel - Plateforme E-commerce Ebong</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            border-bottom: 4px solid #274770; /* Couleur mise à jour */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #34495e;
+            border-bottom: 2px solid #bdc3c7;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #274770; /* Couleur mise à jour */
+            border-bottom: 1px dashed #ecf0f1;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px; /* Rounded corners for tables */
+            overflow: hidden; /* Ensures rounded corners apply to content */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #555;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .placeholder {
+            color: #e74c3c;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cahier des charges fonctionnel</h1>
+
+        <p><strong>Nom du projet:</strong> Plateforme E-commerce Ebong</p>
+        <p><strong>Auteur:</strong> Gemini (Votre assistant IA)</p>
+        <p><strong>Date:</strong> 22/06/2025</p>
+        <p><strong>Version:</strong> 1.0</p>
+
+        <h2>1. Objectif</h2>
+        <p>Le projet "Ebong" est une initiative d'e-commerce portée par le <strong>Centre International de l'Artisanat de Yaoundé (CIAY)</strong>, dédiée à la promotion et à la commercialisation de l'artisanat camerounais. Il vise à offrir une vitrine numérique fiable et accessible pour les créations des artisans, tout en répondant aux spécificités du marché camerounais de l'e-commerce.</p>
+
+        <h3>Objectifs principaux:</h3>
+        <ul>
+            <li>Promouvoir l'artisanat camerounais et le patrimoine culturel.</li>
+            <li>Renforcer la visibilité des artisans à l'échelle nationale, voire internationale.</li>
+            <li>Stimuler les ventes en proposant des moyens de paiement accessibles (Mobile Money, paiement à la livraison) et une logistique efficace.</li>
+            <li>Créer une expérience utilisateur fluide, optimisée pour les smartphones.</li>
+            <li>Assurer l'autonomisation des artisans en leur permettant de digitaliser leurs activités.</li>
+            <li>Doubler les ventes réalisées sur la plateforme dans les 12 premiers mois suivant le lancement.</li>
+        </ul>
+
+        <h3>Proposition de valeur:</h3>
+        <p>Ebong se positionne comme la <strong>"vitrine de l’artisanat camerounais à portée de clic"</strong>. Elle offre une sélection unique d'artisanat d'exception, permettant aux utilisateurs de plonger au cœur des cultures camerounaises et africaines. En soutenant les artisans via la plateforme, les clients contribuent à préserver un savoir-faire ancestral et à promouvoir le développement économique local. Chaque pièce est une œuvre d'art, porteuse d'histoire et de tradition. La proposition de valeur est basée sur l'authenticité et le storytelling, l'accessibilité numérique, et potentiellement la personnalisation des créations.</p>
+
+        <h3>Public cible:</h3>
+        <ul>
+            <li><strong>Artisans camerounais</strong>: Acteurs clés cherchant à augmenter leur visibilité, accéder à un public élargi et vendre leurs créations. Ils bénéficieront d'accompagnement et de formation.</li>
+            <li><strong>Consommateurs passionnés</strong>: Amateurs d'artisanat authentique, familiers avec les créations locales, recherchant des produits uniques et prêts à payer un prix premium pour soutenir les artisans.</li>
+            <li><strong>Curieux et visiteurs occasionnels</strong>: Comprenant les consommateurs locaux découvrant l'artisanat, les touristes, et la diaspora en quête de souvenirs ou produits uniques, sensibles au storytelling et aux offres de lancement.</li>
+        </ul>
+
+        <h3>Contraintes utilisateurs identifiées (Cameroun):</h3>
+        <ul>
+            <li><strong>Fracture numérique</strong>: Seulement 30% de la population maîtrise les outils numériques de base, limitant l'adoption des plateformes en ligne et l'accès à Internet, surtout en zones rurales.</li>
+            <li><strong>Méfiance envers les paiements en ligne</strong>: Environ 65% des consommateurs camerounais préfèrent le paiement à la livraison par crainte des paiements en ligne.</li>
+            <li><strong>Connectivité limitée</strong>: Nécessite une optimisation des temps de chargement et des ressources pour les connexions faibles.</li>
+            <li><strong>Préférence pour les réseaux sociaux</strong>: Les Camerounais utilisent massivement les réseaux sociaux comme WhatsApp ou Facebook pour leurs achats en ligne.</li>
+        </ul>
+
+        <h3>Positionnement UX:</h3>
+        <ul>
+            <li>Une plateforme mobile-first, indispensable étant donné que près de 70% des utilisateurs accèdent à Internet via leurs appareils mobiles. Le site doit être rapide et navigable sur mobile.</li>
+            <li>Un design minimaliste et épuré pour réduire la surcharge cognitive.</li>
+            <li>Priorité à la confiance: affichage de garanties ("Paiements sécurisés avec Mobile Money", "Satisfait ou remboursé") pour rassurer les utilisateurs sur les paiements en ligne.</li>
+            <li>Intégration de contenus riches: vidéos et galeries interactives pour raconter l'histoire des produits et créer une connexion émotionnelle.</li>
+            <li>Localisation et adaptation culturelle: options de langue (français, anglais) et intégration d'anecdotes ou proverbes culturels.</li>
+            <li>Accessibilité pour connexions faibles: optimisation des images (compressées) et des temps de chargement.</li>
+            <li>Mise en avant du storytelling et de l'authenticité des produits.</li>
+        </ul>
+
+        <h2>2. Liste des fonctionnalités détaillées</h2>
+        <p>Cette section recense l'ensemble des fonctionnalités prévues pour la plateforme Ebong, classées par domaines fonctionnels. Chaque fonctionnalité est décrite avec son objectif, son niveau de priorité, les contraintes techniques éventuelles, et les impacts UX associés.</p>
+
+        <h3>2.1 Fonctionnalités cœur</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fonctionnalité</th>
+                    <th>Description détaillée</th>
+                    <th>Priorité</th>
+                    <th>Contraintes / Remarques UX</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>F01</td>
+                    <td>Onboarding personnalisé</td>
+                    <td>Série de questions à l'arrivée (ex: type d'artisanat recherché, région d'intérêt) pour personnaliser l'expérience utilisateur et les recommandations de produits.</td>
+                    <td>Haute</td>
+                    <td>Fluide, sans surcharge cognitive; accessibilité pour tous les niveaux de littératie numérique.</td>
+                </tr>
+                <tr>
+                    <td>F02</td>
+                    <td>Création de compte / Login</td>
+                    <td>Authentification via email + mot de passe ou compte Google / Facebook pour faciliter l'inscription et la connexion, adaptés aux habitudes locales.</td>
+                    <td>Haute</td>
+                    <td>Simplifier au maximum le processus; offrir des options de connexion familières.</td>
+                </tr>
+                <tr>
+                    <td>F03</td>
+                    <td>Tableau de bord utilisateur/artisan</td>
+                    <td>Page d'accueil après connexion avec raccourcis personnalisés (ex: suivi de commande pour le client, gestion des stocks et ventes pour l'artisan).</td>
+                    <td>Haute</td>
+                    <td>Adaptatif selon le profil (client/artisan); clair et hiérarchisé, adapté aux écrans mobiles.</td>
+                </tr>
+                <tr>
+                    <td>F04</td>
+                    <td>Catalogue produits interactif</td>
+                    <td>Accès à une base de données de produits artisanaux avec des visuels de qualité, descriptions enrichies (storytelling) et filtres par catégorie, prix, région.</td>
+                    <td>Haute</td>
+                    <td>Navigation fluide, mise en avant du contenu visuel et narratif.</td>
+                </tr>
+                <tr>
+                    <td>F05</td>
+                    <td>Paniers et processus de commande</td>
+                    <td>Ajout de produits au panier, validation de commande avec multiples options de livraison et de paiement.</td>
+                    <td>Haute</td>
+                    <td>Processus simplifié, minimisant les étapes; informations claires sur les coûts et délais.</td>
+                </tr>
+                <tr>
+                    <td>F06</td>
+                    <td>Paiement sécurisé (Mobile Money & autres)</td>
+                    <td>Intégration des solutions de paiement locales (Orange Money, MTN Mobile Money) et à la livraison.</td>
+                    <td>Haute</td>
+                    <td>Assurer la confiance des utilisateurs, afficher clairement les garanties de sécurité.</td>
+                </tr>
+                <tr>
+                    <td>F07</td>
+                    <td>Suivi de commande</td>
+                    <td>Possibilité pour le client de suivre l'état de sa commande en temps réel.</td>
+                    <td>Moyenne</td>
+                    <td>Informations claires et à jour, notifications push (si implémenté).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.2 Fonctionnalités transverses</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fonctionnalité</th>
+                    <th>Description détaillée</th>
+                    <th>Priorité</th>
+                    <th>Contraintes / Remarques UX</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>F08</td>
+                    <td>Moteur de recherche</td>
+                    <td>Recherche globale dans le contenu (produits, artisans, articles), avec autocomplétion.</td>
+                    <td>Haute</td>
+                    <td>Résultats classés par pertinence, recherche vocale possible (future).</td>
+                </tr>
+                <tr>
+                    <td>F09</td>
+                    <td>Système de filtres</td>
+                    <td>Filtres combinables (tranche de prix, type d'artisanat, région d'origine, matériau) pour affiner la recherche.</td>
+                    <td>Haute</td>
+                    <td>Interface claire, collapsible sur mobile, facile à utiliser.</td>
+                </tr>
+                <tr>
+                    <td>F10</td>
+                    <td>Accessibilité renforcée</td>
+                    <td>Mode contraste élevé, lecture par synthèse vocale (pour les descriptions de produits), taille de texte ajustable.</td>
+                    <td>Haute</td>
+                    <td>Respect des normes RGAA / WCAG, notamment pour les utilisateurs avec des équipements simples.</td>
+                </tr>
+                <tr>
+                    <td>F11</td>
+                    <td>Multi-supports (Responsive Design)</td>
+                    <td>Interface adaptée desktop, tablette, mobile.</td>
+                    <td>Haute</td>
+                    <td>Responsive design, testing sur plusieurs devices (iOS/Android), optimisation pour les connexions faibles.</td>
+                </tr>
+                <tr>
+                    <td>F12</td>
+                    <td>Gestion des préférences utilisateur</td>
+                    <td>Paramétrage des thèmes favoris, type de contenu souhaité, fréquence des notifications.</td>
+                    <td>Moyenne</td>
+                    <td>Facilement accessible depuis le tableau de bord, ton doux et rassurant pour les notifications.</td>
+                </tr>
+                <tr>
+                    <td>F13</td>
+                    <td>Partage social</td>
+                    <td>Intégration facilitée pour le partage des produits et histoires d'artisans sur Facebook, WhatsApp, Instagram.</td>
+                    <td>Moyenne</td>
+                    <td>Intégration native aux plateformes sociales populaires au Cameroun.</td>
+                </tr>
+                <tr>
+                    <td>F14</td>
+                    <td>Système de commentaires/avis</td>
+                    <td>Possibilité pour les clients de laisser des avis et commentaires sur les produits et artisans.</td>
+                    <td>Moyenne</td>
+                    <td>Modération simple mais efficace pour éviter les abus.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.3 Fonctionnalités d'administration (pour le CIAY et les artisans)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fonctionnalité</th>
+                    <th>Description détaillée</th>
+                    <th>Priorité</th>
+                    <th>Contraintes / Remarques UX</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>F15</td>
+                    <td>Interface CMS pour le CIAY</td>
+                    <td>Ajout/modification/suppression de contenus éditoriaux (articles de blog sur l'artisanat, actualités, événements).</td>
+                    <td>Haute</td>
+                    <td>Interface ergonomique pour contributeurs non techniques, formation des équipes.</td>
+                </tr>
+                <tr>
+                    <td>F16</td>
+                    <td>Gestion de boutique pour artisans</td>
+                    <td>Tableau de bord dédié aux artisans pour gérer leurs produits (ajout, modification, suppression), leurs stocks, leurs prix et suivre leurs ventes.</td>
+                    <td>Haute</td>
+                    <td>Interface simplifiée, tutoriels vidéo/PDF intégrés pour accompagner les artisans.</td>
+                </tr>
+                <tr>
+                    <td>F17</td>
+                    <td>Gestion des commandes (admin/artisan)</td>
+                    <td>Interface pour suivre l'état des commandes, générer les bordereaux de livraison et gérer les retours.</td>
+                    <td>Haute</td>
+                    <td>Clair, intuitif, synchronisation en temps réel entre le CIAY et les artisans.</td>
+                </tr>
+                <tr>
+                    <td>F18</td>
+                    <td>Modération des avis/commentaires</td>
+                    <td>Interface pour les administrateurs du CIAY pour modérer les avis clients.</td>
+                    <td>Moyenne</td>
+                    <td>Accessible, avec des règles de modération claires.</td>
+                </tr>
+                <tr>
+                    <td>F19</td>
+                    <td>Statistiques d'usage</td>
+                    <td>Tableau de bord admin avec stats sur les contenus consultés, ventes réalisées, profils créés, données démographiques clients.</td>
+                    <td>Moyenne</td>
+                    <td>Affichage synthétique, exportable (CSV, Excel) pour l'analyse des performances.</td>
+                </tr>
+                <tr>
+                    <td>F20</td>
+                    <td>Outil de formation intégré</td>
+                    <td>Accès à des guides illustrés, tutoriels vidéo et ressources pour les artisans sur l'utilisation de la plateforme.</td>
+                    <td>Haute</td>
+                    <td>Contenu adapté aux niveaux de compétences numériques variés des artisans.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>3. Exigences techniques spécifiques</h2>
+        <p>Cette section définit les exigences techniques minimales et les contraintes d'implémentation à respecter pour assurer la performance, la sécurité, l'accessibilité et la conformité réglementaire de la plateforme Ebong.</p>
+
+        <h3>3.1 Responsive design</h3>
+        <p>L'interface doit être intégralement responsive, avec une attention particulière portée à l'ergonomie mobile. Les breakpoints standards à respecter:</p>
+        <ul>
+            <li>Mobile : &lt; 768 px</li>
+            <li>Tablette: 768 px - 1024 px</li>
+            <li>Desktop: &gt; 1024 px</li>
+        </ul>
+        <p>Les composants doivent être testés sur une gamme représentative d'appareils (iOS/Android, Chrome/Safari/Firefox). Utilisation d'un système de grille fluide (12 colonnes) et de flexbox/grid CSS.</p>
+
+        <h3>3.2 Hébergement</h3>
+        <p>Les données seront hébergées sur des serveurs garantissant une haute disponibilité et une bonne connectivité au Cameroun (ou un CDN efficace) pour minimiser les latences. La préférence sera donnée à des solutions fiables et évolutives (ex: AWS, OVH, DigitalOcean).</p>
+        <ul>
+            <li>Sauvegardes automatiques hebdomadaires avec possibilité de restauration à J-1.</li>
+            <li>Conformité avec les réglementations locales sur la souveraineté des données si applicable <span class="placeholder">...</span>.</li>
+        </ul>
+
+        <h3>3.3 Stockage sécurisé des données</h3>
+        <ul>
+            <li>Toutes les données sensibles (nom, email, informations sur les ventes, données bancaires via Mobile Money) doivent être chiffrées en base (ex: AES 256).</li>
+            <li>Les échanges entre client et serveur doivent se faire via HTTPS/TLS.</li>
+            <li>Les jetons d'authentification doivent être expirables et renouvelables (JWT avec refresh token).</li>
+            <li>Un registre des traitements de données doit être tenu à jour (conformément au Règlement CEMAC 2019 et la Loi n°2010/012 relative à la cybersécurité et à la cybercriminalité).</li>
+        </ul>
+
+        <h3>3.4 Performances</h3>
+        <ul>
+            <li>Le temps de chargement des pages principales (accueil, catalogue produit, fiche artisan) doit être inférieur à 3 secondes sur connexion 3G (test via Lighthouse).</li>
+            <li>Score minimum Google PageSpeed attendu: 80 pour mobile, 90 pour desktop.</li>
+            <li>Utilisation d'un système de cache pour les contenus statiques et les articles populaires (type Redis, CDN ou cache navigateur).</li>
+            <li>Optimisation des images (lazy loading, WebP, compression automatique).</li>
+        </ul>
+
+        <h3>3.5 Multilingue</h3>
+        <ul>
+            <li>Interface prévue nativement pour le multilingue.</li>
+            <li>Version initiale: français (par défaut), anglais (activable par l'utilisateur).</li>
+            <li>Les contenus du CMS doivent être structurés pour autoriser la gestion multilingue.</li>
+            <li>Affichage des dates, devises (FCFA), formats en fonction de la langue sélectionnée.</li>
+        </ul>
+
+        <h3>3.6 Accessibilité (RGAA 4.1 ou équivalent local)</h3>
+        <ul>
+            <li>L'ensemble des pages et composants doivent respecter les critères du Référentiel Général d'Amélioration de l'Accessibilité (RGAA), version 4.1, niveau AA, ou les normes internationales WCAG 2.1 niveau AA, adaptées au contexte local si des directives spécifiques existent.</li>
+            <li>Audit d'accessibilité à prévoir à deux étapes clés: prototype finalisé et produit avant mise en production.</li>
+            <li>Utilisation systématique de composants natifs accessibles ou enrichis avec attributs ARIA appropriés.</li>
+            <li>Navigation au clavier testée sur tous les parcours clés.</li>
+            <li>Contraste couleur, alternatives textuelles, structure de titres hiérarchique à vérifier manuellement et via outils (ex: Wave, Axe, RGAA).</li>
+            <li>L'interface doit rester utilisable jusqu'à 200 % de zoom sans perte de contenu ou d'interactivité.</li>
+            <li>Toutes les vidéos intégrées (ex: storytelling d'artisans) doivent proposer des sous-titres synchronisés. Les contenus audio doivent inclure une transcription textuelle accessible.</li>
+            <li>Les contenus doivent être rédigés dans un langage clair et compréhensible, adapté à un public varié, incluant des utilisateurs avec une maîtrise numérique limitée.</li>
+        </ul>
+
+        <h2>4. Outils choisis et justification</h2>
+        <p>Cette section présente les outils sélectionnés pour la conception, le développement, la gestion de contenu et la documentation du projet "Ebong". Chaque outil a été choisi en fonction de ses capacités à répondre aux besoins techniques et UX identifiés dans les phases amont du projet.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Outil</th>
+                    <th>Catégorie</th>
+                    <th>Usage</th>
+                    <th>Justification technique / UX</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Figma</td>
+                    <td>Design / Prototype</td>
+                    <td>Création de maquettes haute fidélité, wireframes et prototypes interactifs pour visualiser les parcours utilisateurs et exporter les spécifications.</td>
+                    <td>Outil de référence pour le design collaboratif, permet de documenter les interfaces, tester les parcours utilisateurs et exporter facilement les spécifications pour les développeurs.</td>
+                </tr>
+                <tr>
+                    <td>WordPress avec WooCommerce</td>
+                    <td>CMS / E-commerce</td>
+                    <td>Gestion de contenu (articles sur l'artisanat, fiches pratiques, actualités) et gestion de la boutique en ligne (produits, commandes, paiements).</td>
+                    <td>Solution robuste, personnalisable et adaptée à l'e-commerce. Interface de contribution simple pour les équipes éditoriales non techniques et les artisans via des extensions dédiées. Permet une mise en œuvre rapide.</td>
+                </tr>
+                <tr>
+                    <td>Firebase (ou solution backend locale)</td>
+                    <td>Backend / Authentification / Base de données</td>
+                    <td>Gestion des comptes utilisateurs (clients et artisans), base de données des produits et transactions, stockage de fichiers (photos de produits), notifications push (pour les mises à jour de commandes, promotions).</td>
+                    <td>Plateforme évolutive et mobile-friendly. Authentification sécurisée, intégration facile avec front-end JS. Adapté aux données dynamiques (catalogue, ventes, notifications). Une solution backend locale pourrait être envisagée pour des raisons de souveraineté des données et de performance au Cameroun <span class="placeholder">...</span>.</td>
+                </tr>
+                <tr>
+                    <td>Google Analytics 4</td>
+                    <td>Analyse d'usages</td>
+                    <td>Analyse des usages, mesure d'engagement post-lancement, suivi des conversions, identification des points de friction.</td>
+                    <td>Outil essentiel pour l'optimisation continue de la plateforme, gratuit et puissant pour comprendre le comportement des utilisateurs et mesurer l'atteinte des objectifs SMART (ex: taux de conversion, nombre d'achats).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Outils complémentaires :</h3>
+        <ul>
+            <li><strong>FigJam</strong>: Pour la conception de userflows et l'arborescence.</li>
+            <li><strong>Notion</strong>: Pour la gestion documentaire collaborative (glossaire, comptes rendus, bibliographie UX, documentation des processus pour les artisans).</li>
+            <li><strong>Trello / Google Sheets</strong>: Pour l'organisation des tâches marketing et le suivi des jalons de la roadmap UX, en complément d'une méthodologie Kanban.</li>
+            <li><strong>Teams/Zoom/Skype</strong>: Pour la communication en temps réel et les échanges rapides entre les équipes et les artisans.</li>
+        </ul>
+        <p>Ces outils constitueront un socle technique cohérent et interopérable, permettant une bonne circulation de l'information entre les phases de conception, prototypage, développement et mise en production.</p>
+
+        <h2>5. Spécifications UX/UI</h2>
+
+        <h3>5.1 Interactions et flux utilisateur</h3>
+        <h4>Parcours principal (Achat client):</h4>
+        <ol>
+            <li>L'utilisateur arrive sur la page d'accueil avec un message de bienvenue et un call-to-action clair vers la découverte des produits ou la création de compte.</li>
+            <li>Après création ou connexion, il peut explorer le catalogue de produits, filtrer selon ses préférences.</li>
+            <li>L'utilisateur sélectionne un produit, consulte sa fiche détaillée avec storytelling sur l'artisan.</li>
+            <li>Ajout au panier et processus de commande (choix de la livraison, mode de paiement via Mobile Money ou paiement à la livraison).</li>
+            <li>Confirmation de commande et suivi.</li>
+        </ol>
+
+        <h4>Parcours Artisan (Gestion de boutique):</h4>
+        <ol>
+            <li>L'artisan se connecte à son tableau de bord.</li>
+            <li>Il peut ajouter, modifier ou supprimer des produits, gérer ses stocks.</li>
+            <li>Il reçoit des notifications pour les nouvelles commandes, gère leur préparation et leur expédition.</li>
+            <li>Accès aux statistiques de vente et aux ressources de formation.</li>
+        </ol>
+
+        <h4>Accès transversal:</h4>
+        <ul>
+            <li>Un menu persistant (barre de navigation fixe au bas de l'écran sur mobile) permet à l'utilisateur d'accéder à tout moment aux fonctionnalités essentielles: Accueil, Catalogue, Recherche, Panier, Compte.</li>
+            <li>Pour les artisans, des raccourcis vers la gestion des produits, les commandes et les statistiques seront toujours accessibles depuis leur tableau de bord.</li>
+        </ul>
+
+        <h4>Feedback utilisateur systématique:</h4>
+        <ul>
+            <li><strong>Chargement</strong>: spinners animés lors de l'attente des données (avec texte explicatif si &gt;1,5 s).</li>
+            <li><strong>Confirmation</strong>: messages clairs et positifs après une action réussie (ex: "Votre commande a bien été passée", "Produit ajouté avec succès").</li>
+            <li><strong>Erreurs</strong>: messages explicites en cas d'erreur (ex: "Le champ 'quantité' est requis", "Impossible de charger les données, veuillez vérifier votre connexion").</li>
+            <li><strong>Transitions</strong>: animations douces pour le passage d'un écran à l'autre afin de guider l'attention de l'utilisateur.</li>
+        </ul>
+
+        <h3>5.2 Hiérarchie visuelle</h3>
+        <ul>
+            <li>Utilisation rigoureuse des niveaux de titres: H1 réservé aux titres de pages, H2 pour les grandes sections, H3 pour les sous-sections. Cette structuration garantit une lisibilité optimale et une navigation facilitée pour les lecteurs d'écran.</li>
+            <li>Les textes doivent être rédigés avec une taille de police minimale de 16px, en utilisant une police sans serif (ex: Roboto) pour assurer confort de lecture et modernité.</li>
+            <li>Le fond clair (blanc ou gris très pâle) est associé à une palette contrastée : texte principal en noir ou gris foncé (contraste $\geq$ 4.5:1), éléments secondaires (légendes, indications) en gris moyen.</li>
+            <li>L'organisation des contenus suit une grille fluide de 12 colonnes (avec marges de sécurité), qui s'adapte aux différents formats (desktop, tablette, mobile).</li>
+            <li><strong>Couleurs vibrantes et culturelles</strong>: Inspirées des tissus traditionnels (pagne) et de l'artisanat local, utilisant des couleurs chaudes et authentiques (bleu, marron, ocre, rouge, jaune). Ces couleurs seront utilisées pour les encadrés, les pictogrammes ou les onglets afin de guider visuellement l'utilisateur tout en maintenant une cohérence esthétique sur l'ensemble de la plateforme.</li>
+        </ul>
+
+        <h3>5.3 Conventions d'interaction / localisation</h3>
+        <ul>
+            <li><strong>Icônes</strong>: chaque action est accompagnée d'une icône descriptive (ex.: panier, loupe, compte), suivie d'un libellé texte pour garantir la compréhension.</li>
+            <li><strong>Boutons</strong>: les boutons d'action principaux (ex. "Ajouter au panier", "Valider la commande") seront de couleur uniforme (ex: bleu principal ou une couleur vibrante de la palette Ebong) et positionnés de manière cohérente. Les boutons secondaires seront visuellement différenciés (contour ou couleur grise).</li>
+            <li><strong>Formulaires</strong>: champs avec labels toujours visibles, champs obligatoires signalés par un astérisque rouge, aide contextuelle via infobulles pour guider l'utilisateur.</li>
+            <li><strong>Navigation mobile</strong>: menu hamburger en haut à gauche pour les menus secondaires, navigation principale fixe en bas avec cinq icônes clés (Accueil, Produits, Recherche, Panier, Compte).</li>
+            <li><strong>Localisation automatique</strong>: détection automatique de la langue du navigateur (français/anglais) pour basculer vers l'interface correspondante. Possibilité de modifier manuellement la langue et le fuseau horaire dans les préférences utilisateur.</li>
+            <li><strong>Dates et formats</strong>: affichage localisé (ex. "12 juin 2025" en français, "June 12, 2025" en anglais). Format horaire 24h pour le public francophone, 12h am/pm pour l'anglais.</li>
+        </ul>
+
+        <h3>5.4 Accessibilité</h3>
+        <p>L'accessibilité constitue un pilier central de la plateforme "Ebong", visant à garantir une utilisation équitable, sans obstacle, pour toutes les personnes, y compris celles en situation de handicap temporaire ou permanent. Les recommandations sont fondées sur les bonnes pratiques internationales (WCAG 2.1 niveau AA) et le RGAA 4.1.</p>
+        <ul>
+            <li><strong>Navigation clavier</strong>: tous les contenus interactifs doivent être accessibles à l'aide du clavier seul (tabulation, entrée, espace). Les ordres de tabulation doivent être logiques et cohérents.</li>
+            <li><strong>Composants compatibles lecteurs d'écran</strong>: tous les éléments interactifs (liens, boutons, menus déroulants, etc.) doivent utiliser les balises ARIA appropriées (ex : aria-label, aria-expanded, role=button) et fournir une information intelligible lorsqu'ils sont lus à haute voix.</li>
+            <li><strong>Alternatives textuelles</strong>: chaque image décorative ou informative (ex: photos de produits) doit avoir un attribut alt pertinent. Les icônes fonctionnelles doivent être accompagnées de texte visible ou d'un libellé accessible.</li>
+            <li><strong>Contrastes de couleurs</strong>: le ratio de contraste entre le texte et le fond doit être supérieur ou égal à 4.5:1 pour le texte normal, et 3:1 pour les grands titres. Les éléments graphiques (icônes, bordures) doivent également respecter des contrastes suffisants.</li>
+            <li><strong>Indicateurs visuels de focus</strong>: tous les éléments recevant le focus doivent afficher un contour visible et distinct, d'au moins 2px, sans être supprimé via CSS (outline: none proscrit sans alternative).</li>
+            <li><strong>Compatibilité zoom et redimensionnement</strong>: l'interface doit rester utilisable jusqu'à 200 % de zoom sans perte de contenu ou d'interactivité, conformément aux standards WCAG.</li>
+            <li><strong>Sous-titrage et transcription</strong>: toutes les vidéos intégrées (ex: storytelling d'artisans) doivent proposer des sous-titres synchronisés. Les contenus audio doivent inclure une transcription textuelle accessible.</li>
+            <li><strong>Temps de lecture et complexité</strong>: les contenus doivent être rédigés dans un langage clair et compréhensible, adapté à un public varié, incluant des utilisateurs avec une maîtrise numérique limitée.</li>
+        </ul>
+
+        <h2>6. Annexes</h2>
+        <p>L'annexe regroupe l'ensemble des ressources complémentaires indispensables à la bonne compréhension, au développement et à la validation du projet Ebong. Elle est organisée de manière thématique afin de permettre une consultation rapide par les parties prenantes.</p>
+
+        <h3>6.1 Userflows</h3>
+        <p>Diagrammes représentant les parcours utilisateurs principaux (ex: achat d'un produit, ajout d'un produit par l'artisan, prise de contact pour service personnalisé) et alternatifs. Formats disponibles: PDF (annotation possible), lien Figma interactif.</p>
+
+        <h3>6.2 Arborescence de navigation</h3>
+        <p>Schéma complet de l'architecture de l'information du site web et de l'application mobile. Indication des pages principales, secondaires et des chemins de navigation. Versions disponibles: figée (PDF) et évolutive (FigJam).</p>
+
+        <h3>6.3 Maquettes UI haute fidélité (Figma)</h3>
+        <p>Versions mobile et desktop pour les écrans clés (onboarding, tableau de bord client/artisan, fiches produits, processus de commande, pages de service personnalisé). Composants alignés sur la librairie de composants. Liens partagés avec droits de lecture pour l'équipe technique et fonctionnelle.</p>
+
+        <h3>6.4 Guide des composants UI (Design System)</h3>
+        <p>Composants documentés avec leur nom, leur usage, leurs variantes et les propriétés configurables. Couverture: boutons, champs de formulaire, modales, icônes, menus, cartes produits, éléments de storytelling. Utilisation prévue: intégration directe dans les sprints de développement pour assurer la cohérence visuelle et le respect de la charte graphique.</p>
+
+        <h3>6.5 Table des contenus éditoriaux (CMS)</h3>
+        <p>Liste des contenus statiques et dynamiques prévus (thèmes d'artisanat, catégories de produits, profils d'artisans, formats: texte, vidéo, audio). Format: tableur Google Sheets ou Airtable. Champs définis: titre, type de contenu, public cible, statut de production, responsable, liens vers les actifs multimédias.</p>
+
+        <h3>6.6 Benchmark UX comparatif</h3>
+        <p>Analyse des plateformes concurrentes (Amazon Handmade, Etsy, Jumia, Anka, Durell Market, Lamater, Glotelho) et inspirantes. Critères évalués: navigation, accessibilité, gestion de l'espace personnel, personnalisation, gestion de la confiance, logistique, storytelling. Format: rapport synthétique en PDF.</p>
+
+        <h3>6.7 Rapport d'audit accessibilité</h3>
+        <p>Résultats des tests réalisés avec outils automatiques (Wave, Axe) et manuels (tests clavier, lecteurs d'écran). Captures d'écran, liste des corrections recommandées, plan d'action. Date de réalisation, version du prototype testé, observations par catégorie RGAA/WCAG.</p>
+
+        <h3>6.8 Glossaire projet</h3>
+        <p>Définitions des termes techniques ou spécifiques utilisés dans ce document (ex: storytelling, Mobile Money, RGAA, UX, UI, Kanban, Most, etc.). Public cible: membres non techniques ou parties prenantes extérieures. Format: page collaborative Notion ou PDF.</p>
+
+        <h3>6.9 Étude de marché et veille stratégique</h3>
+        <p>Synthèse des informations sur le contexte camerounais, l'état de l'e-commerce, les défis logistiques et réglementaires, ainsi que les opportunités. Comprend les données chiffrées sur le marché de l'e-commerce, la pénétration d'Internet, et les habitudes de consommation locales.</p>
+
+        <h3>6.10 Rapports d'interviews utilisateurs</h3>
+        <p>Documentation des entretiens menés, incluant les protos-personas et les user journey maps. Mettra en évidence les préférences pour les marchés locaux, la méfiance envers les paiements en ligne, et les pistes stratégiques envisagées (services personnalisés, ciblage diaspora, etc.).</p>
+    </div>
+</body>
+</html>
